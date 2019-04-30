@@ -4,7 +4,7 @@
     <div class="jumbotron">
         <h1>租房网</h1>
         <p class="lead">租房网免费提供了房主房客的沟通平台, 出租房源？租住房源？快来租房网。</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">随意浏览»</a></p>
+        <p><a href="./HouseList.aspx" " class="btn btn-primary btn-lg">随意浏览»</a></p>
     </div>
 
     <div class="row">
