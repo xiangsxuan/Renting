@@ -1,3 +1,7 @@
+*.js linguist-language=Csharp
+*.css linguist-language=Csharp
+*.html linguist-language=Csharp
+
 ###############################################################################
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
