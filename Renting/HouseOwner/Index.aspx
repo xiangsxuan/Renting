@@ -1,16 +1,32 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Index.aspx.cs" Inherits="HouseOwner_Index" %>
+﻿<%@ Page Title="OwnerPage" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Index.aspx.cs" Inherits="HouseOwner_Index" %>
 
-<!DOCTYPE html>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+    <div class="jumbotron">
+        <h1>快速出租闲置房源</h1>
+                <%--<p class="lead">出租房源？租住房源？快来租房网，为您免费提供了房主房客沟通平台, 。</p>--%>
+        <p><a href="./AddHouse.aspx" " class="btn btn-primary btn-lg">前往»</a></p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>修改密码</h2>
+            <p>
+                <a class="btn btn-default" href="./ChangePassword.aspx">前往 &raquo;</a>
+            </p>
         </div>
-    </form>
-</body>
-</html>
+        <div class="col-md-4">
+            <h2>发布房源信息</h2>
+            <p>
+                <a class="btn btn-default" href="./AddHouse.aspx">前往 &raquo;</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>房客交流</h2>
+            <p>
+                <a class="btn btn-default" href="./Chat.aspx">前往 &raquo;</a>
+            </p>
+        </div>
+    </div>
+</asp:Content>
+

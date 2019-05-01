@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Security.Claims;
-using System.Security.Principal;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
@@ -72,5 +69,25 @@ public partial class SiteMaster : MasterPage
     protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
     {
         Context.GetOwinContext().Authentication.SignOut();
+    }
+
+    protected string GetUserName()
+    {
+        if (Session["AdminName"] != null && Session["AdminName"].ToString() != String.Empty)
+        {
+            return "您好!" + Session["AdminName"].ToString();
+        }
+        else if (Session["OwnerName"] != null && Session["OwnerName"].ToString() != String.Empty)
+        {
+            return "您好!" + Session["OwnerName"].ToString();
+        }
+        else if (Session["TenantName"] != null && Session["TenantName"].ToString() != String.Empty)
+        {
+            return "您好!" + Session["TenantName"].ToString();
+        }
+        else
+        {
+            return "";
+        }
     }
 }

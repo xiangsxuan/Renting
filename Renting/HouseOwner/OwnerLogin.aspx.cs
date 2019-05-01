@@ -24,8 +24,19 @@ public partial class Tenant_TenantLogin : System.Web.UI.Page
         dr = sqlData.GetDataReader("select * from  HouseOwner where Name='" + UserName.Text + "'and Password='" + Password.Text + "' ");
         if (dr.Read())
         {
+            Session["AdminId"] = String.Empty;
+            Session["AdminName"] = String.Empty;
+            Session["HouseOwnerId"] = String.Empty;
+            Session["HouseOwnerName"] = String.Empty;
+            Session["TenantId"] = String.Empty;
+            Session["TenantName"] = String.Empty;
+            Session["Role"] = String.Empty;
+            Session["Name"] = String.Empty;
+
             Session["HouseOwnerId"] = dr["HouseOwnerId"].ToString();
             Session["HouseOwnerName"] = dr["Name"].ToString();
+            Session["Name"] = dr["Name"].ToString();
+            Session["Role"] = "HouseOwner";
             Alert.AlertAndRedirect("登陆成功！", "./Index.aspx");
         }
         else

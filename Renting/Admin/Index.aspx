@@ -1,16 +1,36 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Index.aspx.cs" Inherits="Admin_Index" %>
+﻿<%@ Page Title="AdminPage" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Index.aspx.cs" Inherits="Admin_Index" %>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-<!DOCTYPE html>
+    <div class="jumbotron">
+        <h1>管理站点</h1>
+<%--        <p class="lead">出租房源？租住房源？快来租房网，为您免费提供了房主房客沟通平台, 。</p>
+        <p><a href="./HouseList.aspx" " class="btn btn-primary btn-lg">随意浏览»</a></p>--%>
+    </div>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>修改密码</h2>
+            <p>
+                <a class="btn btn-default" href="./ChangePassword.aspx">前往 &raquo;</a>
+            </p>
         </div>
-    </form>
-</body>
-</html>
+        <div class="col-md-4">
+            <h2>新增管理员</h2>
+            <p>
+                <a class="btn btn-default" href="./AddAdmin.aspx">前往 &raquo;</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>查看网站使用情况</h2>
+            <p>
+                <a class="btn btn-default" href="./WebState.aspx">前往 &raquo;</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>房源信息管理</h2>
+            <p>
+                <a class="btn btn-default" href="./HouseManage.aspx">前往 &raquo;</a>
+            </p>
+        </div>
+    </div>
+</asp:Content>

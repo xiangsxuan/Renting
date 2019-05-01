@@ -1,12 +1,5 @@
-﻿using Microsoft.AspNet.Identity;
-using Renting;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class Admin_AdminLogin : System.Web.UI.Page
 {
@@ -28,8 +21,19 @@ public partial class Admin_AdminLogin : System.Web.UI.Page
         dr = sqlData.GetDataReader("select * from  Admin where Name='" + UserName.Text + "'and Password='" + Password.Text + "' ");
         if (dr.Read())
         {
+            Session["AdminId"] = String.Empty;
+            Session["AdminName"] = String.Empty;
+            Session["HouseOwnerId"] = String.Empty;
+            Session["HouseOwnerName"] = String.Empty;
+            Session["TenantId"] = String.Empty;
+            Session["TenantName"] = String.Empty;
+            Session["Role"] = String.Empty;
+            Session["Name"] = String.Empty;
+
             Session["AdminId"] = dr["AdminId"].ToString();
             Session["AdminName"] = dr["Name"].ToString();
+            Session["Name"] = dr["Name"].ToString();
+            Session["Role"] = "Admin";
             Alert.AlertAndRedirect("登陆成功！", "./Index.aspx");
         }
         else
