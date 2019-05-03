@@ -3,6 +3,9 @@
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <p>
+        <a class="btn btn-default" href="./Index.aspx">返回管理界面 &raquo;</a>
+    </p>
     <h2><%: Title %>.</h2>
 
     <div>

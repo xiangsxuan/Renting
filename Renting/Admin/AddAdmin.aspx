@@ -1,11 +1,15 @@
-﻿<%@ Page Title="新增管理员"  Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="AddAdmin.aspx.cs" Inherits="Admin_AddAdmin" %>
+﻿<%@ Page Title="新增管理员" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="AddAdmin.aspx.cs" Inherits="Admin_AddAdmin" %>
 
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+    <p>
+        <a class="btn btn-default" href="./Index.aspx">返回管理界面 &raquo;</a>
+    </p>
     <h2><%: Title %>.</h2>
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
     </p>
+
 
     <div class="form-horizontal">
         <h4>添加管理员帐户。</h4>

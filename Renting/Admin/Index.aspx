@@ -27,7 +27,13 @@
             </p>
         </div>
         <div class="col-md-4">
-            <h2>房源信息管理</h2>
+            <h2>新增房源</h2>
+            <p>
+                <a class="btn btn-default" href="./AddHouse.aspx">前往 &raquo;</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>删除/修改房源信息</h2>
             <p>
                 <a class="btn btn-default" href="./HouseManage.aspx">前往 &raquo;</a>
             </p>

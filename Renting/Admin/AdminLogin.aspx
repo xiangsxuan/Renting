@@ -1,10 +1,12 @@
-﻿<%@ Page Title="管理员登录" Language="C#" MasterPageFile="~/Site.Master"  AutoEventWireup="true" CodeFile="AdminLogin.aspx.cs" Inherits="Admin_AdminLogin" Async="true" %>
+﻿<%@ Page Title="管理员登录" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="AdminLogin.aspx.cs" Inherits="Admin_AdminLogin" Async="true" %>
 
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <h2><%: Title %>.</h2>
-
+    <p>
+        <a class="btn btn-default" href="./Index.aspx">返回管理界面 &raquo;</a>
+    </p>
     <div class="row">
         <div class="col-md-8">
             <section id="loginForm">
@@ -17,7 +19,7 @@
                         </p>
                     </asp:PlaceHolder>
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="UserName" CssClass="col-md-2 control-label" style="height: 20px; left: -1px; top: 0px">用户名</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="UserName" CssClass="col-md-2 control-label" Style="height: 20px; left: -1px; top: 0px">用户名</asp:Label>
                         <div class="col-md-10">
                             <asp:TextBox runat="server" ID="UserName" CssClass="form-control" />
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="UserName"
