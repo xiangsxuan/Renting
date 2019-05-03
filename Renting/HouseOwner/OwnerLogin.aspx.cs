@@ -37,6 +37,7 @@ public partial class Tenant_TenantLogin : System.Web.UI.Page
             Session["HouseOwnerName"] = dr["Name"].ToString();
             Session["Name"] = dr["Name"].ToString();
             Session["Role"] = "HouseOwner";
+            Session["Phone"] = dr["Phone"].ToString();
             Alert.AlertAndRedirect("登陆成功！", "./Index.aspx");
         }
         else

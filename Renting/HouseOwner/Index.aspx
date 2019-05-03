@@ -21,6 +21,12 @@
                 <a class="btn btn-default" href="./AddHouse.aspx">前往 &raquo;</a>
             </p>
         </div>
+         <div class="col-md-4">
+            <h2>我发布的房源</h2>
+            <p>
+                <a class="btn btn-default" href="./MyHouse.aspx">前往 &raquo;</a>
+            </p>
+        </div>
         <div class="col-md-4">
             <h2>房客交流</h2>
             <p>
@@ -29,4 +35,3 @@
         </div>
     </div>
 </asp:Content>
-
