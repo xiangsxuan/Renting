@@ -11,4 +11,8 @@ public partial class Tenant_HouseSearch : System.Web.UI.Page
     {
 
     }
+    protected void HouseSearch(object sender, EventArgs e)
+    {
+
+    }
 }

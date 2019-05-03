@@ -1,0 +1,28 @@
+﻿body{margin:6px 0 0 0;background-color:#fff;color:#000;}
+body,td,.p1,.p2,.i{font-family:arial}
+ .f{line-height:120%;font-size:100%;width:32em;padding-left:15px;word-break:break-all;word-wrap:break-word;}
+  .bi {background-color:#D9E1F7;height:20px;margin-bottom:12px;  font-size:12px;}
+.bi a{ font-size:12px; font-family:arial}
+
+.top a{ font-size:12px;}
+form{margin:0}
+.i{font-size:16px}
+.Tit{height:21px; font-size:14px;}
+.Tit a{color:#261cdc}
+.fB{ font-weight:bold;}
+
+ body,td,.p1,.p2,.i{font-family:arial}
+   .p{padding-left:18px;font-size:14px;word-spacing:4px;}
+   .p a{padding-left:9px;font-size:14px;}
+.f14{FONT-SIZE:14px}
+.s{width:8%;padding-left:10px; height:25px;}
+#ft{clear:both;line-height:20px;background:#e6e6e6;text-align:center}
+#ft,#ft *{color:#77C;font-size:12px;font-family:Arial}
+#ft span{color:#666}
+.hand { cursor:hand; }
+
+.red, .red:link, .red:visited { color:#008000; }
+.none, .none:alink, .none:visited { text-decoration:none; }
+.center { text-align:center;}
+
+#dCopy, #dCopy A:link, #dCopy A:visited { font-size:12px; color:Gray; padding-top:8px; }

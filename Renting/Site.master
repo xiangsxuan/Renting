@@ -14,7 +14,25 @@
     </asp:PlaceHolder>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <style type="text/css">
+        <!--
+        p {
+            margin: 0;
+            padding: 0
+        }
+                #b {
+            font-family: arial
+        }
 
+        #b {
+            height: 30px;
+            padding-top: 4px
+        }
+
+        #b {
+            color: #77c
+        }
+    </style>
 </head>
 <body>
     <form runat="server">
@@ -54,8 +72,9 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a runat="server" class="hvr-overline-from-center button2" href="~/Account/Profile"><%: GetUserName()  %></a></li>                                <li>
-                            <li><a runat="server" class="hvr-overline-from-center button2" href="~/Account/Logout.aspx"><%: GetUserName()==String.Empty? "":"退出登陆" %></a></li>
+                        <li><a runat="server" class="hvr-overline-from-center button2" href="~/Account/Profile"><%: GetUserName()  %></a></li>
+                        <li>
+                        <li><a runat="server" class="hvr-overline-from-center button2" href="~/Account/Logout.aspx"><%: GetUserName()==String.Empty? "":"退出登陆" %></a></li>
                     </ul>
 
                     <%--<asp:LoginView runat="server" ViewStateMode="Disabled" Visible="false">
@@ -74,7 +93,6 @@
                             </ul>
                         </LoggedInTemplate>
                     </asp:LoginView>--%>
-
                 </div>
             </div>
         </div>
