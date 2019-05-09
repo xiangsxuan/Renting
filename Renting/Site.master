@@ -32,6 +32,9 @@
         #b {
             color: #77c
         }
+        .auto-style1 {
+            margin-top: 0px;
+        }
     </style>
 </head>
 <body>
@@ -99,7 +102,7 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
+            <hr class="auto-style1" />
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - 租房网</p>
             </footer>

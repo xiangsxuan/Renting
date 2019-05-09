@@ -16,7 +16,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <asp:Button runat="server" Text="搜索房源" OnClick="HouseSearch_Click" CssClass="btn btn-default" ValidationGroup="" />
+                            <asp:Button runat="server" Text="搜索房源"  CssClass="btn btn-default" ValidationGroup="" />
                         </div>
                     </div>
                 </div>
