@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 /Renting/App_Code/MailConfiguration.cs
+/Renting.zip
