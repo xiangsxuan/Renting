@@ -1,32 +1,41 @@
 ﻿using Renting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Mail;
-using System.Text;
-using System.Web;
 
 /// <summary>
-/// sendMail 的摘要说明
+/// SendMail是一个建议的SMTP邮箱发送类
 /// </summary>
-public class sendMail
+public class SendMail
 {
-    public  bool SendEmailAsync(string receiveEmail, string subject, string message)
+    public bool SendEmailAsync(string receiveEmail, string subject, string message)
     {
-        using (SmtpClient client = new SmtpClient(MailConfiguration.Host, MailConfiguration.Port))
+        MailMessage myMessage = new MailMessage();
+        myMessage.Subject = subject;
+        myMessage.Body = message;
+        myMessage.From = new MailAddress(MailConfiguration.Sender, "有人在租房网找你啦!~");
+        myMessage.To.Add(new MailAddress(receiveEmail));
+        myMessage.IsBodyHtml = true;
+
+        SmtpClient mySmtpClient = new SmtpClient
         {
-            client.Credentials = new NetworkCredential(MailConfiguration.Sender, MailConfiguration.Password);
-            client.EnableSsl = true;
+            Host = MailConfiguration.Host,
+            Port = MailConfiguration.Port,
+            Credentials = new System.Net.NetworkCredential(MailConfiguration.Sender, MailConfiguration.Password),
+            EnableSsl = true
+        };
 
-            MailMessage mail = new MailMessage(MailConfiguration.Sender, receiveEmail, subject, message);
-            mail.SubjectEncoding = Encoding.UTF8;
-            mail.BodyEncoding = Encoding.UTF8;
-            mail.IsBodyHtml = true;
-
-            client.SendMailAsync(mail);
+        try
+        {
+            mySmtpClient.Send(myMessage);
+            System.Diagnostics.Debug.WriteLine("发送邮箱成功！");
             return true;
         }
+        catch (SmtpException ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex.Message);
+            return false;
+            throw;
+        }
+
     }
 }
 

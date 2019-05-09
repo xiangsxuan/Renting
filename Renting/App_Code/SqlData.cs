@@ -42,10 +42,8 @@ public class SqlData
     /// </summary>
     public void CloseDataBase()
     {
-
         con.Close();
         con.Dispose();
-
     }
     /// <summary>
     /// 返回DataSet数据集
@@ -70,7 +68,6 @@ public class SqlData
         dv = ds.Tables[0].DefaultView;
         CloseDataBase();
         return dv;
-
     }
     /// <summary>
     /// 返回Datareader对象
@@ -83,10 +80,7 @@ public class SqlData
         cmd = new SqlCommand(Sqlstr, con);
         sdr = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
 
-
         return sdr;
-
-
     }
 
     /// <summary>
@@ -118,6 +112,4 @@ public class SqlData
         CloseDataBase();
         return ReturnSql;
     }
-  
 }
-

@@ -6,7 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Renting", "Renting\", "{48F26C04-44E0-4808-BDF9-B4A200C1FAAD}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
-		ProjectReferences = "{a3a48e12-e8dc-4a41-8773-771dd4980785}|BLL.dll;{888df883-77e1-45d6-b14b-e17930c07ef2}|Common.dll;{7c00a50f-1893-4e68-9518-9b8b15eabf4a}|DAL.dll;{DC50E7D5-B9A2-4613-936F-EC1C99AFB7AB}|Model.dll;"
+		ProjectReferences = ""
 		Debug.AspNetCompiler.VirtualPath = "/localhost_8396"
 		Debug.AspNetCompiler.PhysicalPath = "Renting\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_8396\"
@@ -26,14 +26,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Renting", "Renting\", "{48F
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "..\GHCampusNet_63915017-6199-43f5-b6c4-d52622824902\BLL\BLL.csproj", "{A3A48E12-E8DC-4A41-8773-771DD4980785}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\GHCampusNet_63915017-6199-43f5-b6c4-d52622824902\Common\Common.csproj", "{888DF883-77E1-45D6-B14B-E17930C07EF2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\GHCampusNet_63915017-6199-43f5-b6c4-d52622824902\DAL\DAL.csproj", "{7C00A50F-1893-4E68-9518-9B8B15EABF4A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "..\GHCampusNet_63915017-6199-43f5-b6c4-d52622824902\Model\Model.csproj", "{DC50E7D5-B9A2-4613-936F-EC1C99AFB7AB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,22 +36,6 @@ Global
 		{48F26C04-44E0-4808-BDF9-B4A200C1FAAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48F26C04-44E0-4808-BDF9-B4A200C1FAAD}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{48F26C04-44E0-4808-BDF9-B4A200C1FAAD}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{A3A48E12-E8DC-4A41-8773-771DD4980785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3A48E12-E8DC-4A41-8773-771DD4980785}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A3A48E12-E8DC-4A41-8773-771DD4980785}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A3A48E12-E8DC-4A41-8773-771DD4980785}.Release|Any CPU.Build.0 = Release|Any CPU
-		{888DF883-77E1-45D6-B14B-E17930C07EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{888DF883-77E1-45D6-B14B-E17930C07EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{888DF883-77E1-45D6-B14B-E17930C07EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{888DF883-77E1-45D6-B14B-E17930C07EF2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7C00A50F-1893-4E68-9518-9B8B15EABF4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C00A50F-1893-4E68-9518-9B8B15EABF4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C00A50F-1893-4E68-9518-9B8B15EABF4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C00A50F-1893-4E68-9518-9B8B15EABF4A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DC50E7D5-B9A2-4613-936F-EC1C99AFB7AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC50E7D5-B9A2-4613-936F-EC1C99AFB7AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC50E7D5-B9A2-4613-936F-EC1C99AFB7AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC50E7D5-B9A2-4613-936F-EC1C99AFB7AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
