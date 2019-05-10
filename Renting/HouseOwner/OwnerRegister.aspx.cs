@@ -20,7 +20,7 @@ public partial class Account_Register : Page
     SqlData data = new SqlData();
     protected void CreateUser_Click(object sender, EventArgs e)
     {
-        data.RunSql("insert into  HouseOwner (Name,Email,Password) values ('" + UserName.Text + "','" + Email.Text + "','"+Password.Text + "')");
+        data.RunSql("insert into  HouseOwner (Name,Email,Password) values ('" + UserName.Text + "','" + Email.Text + "','"+Password.Text.GetHashCode().ToString() + "')");
         Alert.AlertAndRedirect("注册成功，跳转至登陆页面", "OwnerLogin.aspx");
     }
 }

@@ -21,7 +21,7 @@ public partial class Tenant_TenantLogin : System.Web.UI.Page
 
     protected void LogIn(object sender, EventArgs e)
     {
-        dr = sqlData.GetDataReader("select * from  HouseOwner where Name='" + UserName.Text + "'and Password='" + Password.Text + "' ");
+        dr = sqlData.GetDataReader("select * from  HouseOwner where Name='" + UserName.Text + "'and Password='" + Password.Text.GetHashCode().ToString() + "' ");
         if (dr.Read())
         {
             Session["AdminId"] = String.Empty;
