@@ -1,14 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class HouseOwner_Chat : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
 
+    }
+    protected void SendEmail(object sender, EventArgs e)
+    {
+        try
+        {
+            SendMail mail = new SendMail();
+            mail.SendEmailAsync(Email.Text, Subject.Text, CKEditorContent.Text);
+            Alert.AlertAndRedirect("已发送邮件,请耐心等候回复", "./Chat.aspx");
+
+        }
+        catch (Exception)
+        {
+            Alert.AlertAndRedirect("有Bug", "./Chat.aspx");
+            throw;
+        }
     }
 }
