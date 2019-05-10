@@ -12,7 +12,7 @@ public partial class Tenant_Chat : System.Web.UI.Page
         {
         SendMail mail = new SendMail();
         mail.SendEmailAsync(Email.Text,Subject.Text,CKEditorContent.Text);
-        Alert.AlertAndRedirect("已发送邮件,请耐心等候回复"+ Email.Text+Subject.Text, "./Chat.aspx");
+        Alert.AlertAndRedirect("已发送邮件,请耐心等候回复", "./Chat.aspx");
 
         }
         catch (Exception)
