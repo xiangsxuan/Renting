@@ -1,13 +1,8 @@
-﻿using Microsoft.AspNet.Identity;
-using Renting;
-using System;
+﻿using System;
 using System.Data.SqlClient;
-using System.Web;
 
 public partial class Tenant_TenantLogin : System.Web.UI.Page
 {
-    SqlDataReader sqlDataReader;
-    SqlData sqlData = new SqlData();
     protected void Page_Load(object sender, EventArgs e)
     {
         //返回链接
@@ -21,6 +16,8 @@ public partial class Tenant_TenantLogin : System.Web.UI.Page
 
     protected void LogIn(object sender, EventArgs e)
     {
+        SqlDataReader sqlDataReader;
+        SqlData sqlData = new SqlData();
         sqlDataReader = sqlData.GetDataReader("select * from  Tenant where Name='" + UserName.Text + "'and Password='" + Password.Text + "' ");
         if (sqlDataReader.Read())
         {
