@@ -29,7 +29,7 @@
 
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <asp:Button runat="server" OnClick="AddBoard" Text="发布" CssClass="btn btn-default" />
+                            <asp:Button runat="server" OnClick="AddBoard" Text="发布" CssClass="btn btn-success" />
                         </div>
                     </div>
 
