@@ -11,31 +11,36 @@
         <div class="col-md-4">
             <h2>修改密码</h2>
             <p>
-                <a class="btn btn-default" href="./ChangePassword.aspx">前往 &raquo;</a>
+                <a class="btn btn-success" href="./ChangePassword.aspx">前往 &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
             <h2>新增管理员</h2>
             <p>
-                <a class="btn btn-default" href="./AddAdmin.aspx">前往 &raquo;</a>
+                <a class="btn btn-success" href="./AddAdmin.aspx">前往 &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
             <h2>查看网站使用情况</h2>
             <p>
-                <a class="btn btn-default" href="./WebState.aspx">前往 &raquo;</a>
+                <a class="btn btn-success" href="./WebState.aspx">前往 &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
             <h2>新增房源</h2>
             <p>
-                <a class="btn btn-default" href="./AddHouse.aspx">前往 &raquo;</a>
+                <a class="btn btn-success" href="./AddHouse.aspx">前往 &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
             <h2>删除/修改房源信息</h2>
             <p>
-                <a class="btn btn-default" href="./HouseManage.aspx">前往 &raquo;</a>
+                <a class="btn btn-success" href="./HouseManage.aspx">前往 &raquo;</a>
+            </p>
+        </div>        <div class="col-md-4">
+            <h2>发布公告</h2>
+            <p>
+                <a class="btn btn-success" href="./AddInfoBoard.aspx">前往 &raquo;</a>
             </p>
         </div>
     </div>
