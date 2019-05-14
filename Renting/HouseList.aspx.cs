@@ -1,48 +1,77 @@
 ﻿using System;
-using System.Collections;
-using System.Configuration;
-using System.Data;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
 using System.Data.SqlClient;
-using System.Xml;
-using System.IO;
+using System.Net;
+using System.Web.Script.Serialization;
+using System.Web.UI;
 
-public partial class Contact : Page
+public partial class HouseList : Page
 {
     SqlData sqlData = new SqlData();
     protected void Page_Load(object sender, EventArgs e)
     {
-        bindMyData();
+
     }
 
-    private void bindMyData()
+    public string getLocalHouse()
     {
-        string str3 = "select * from HouseImg";
-        DataSet ds3 = sqlData.GetDs(str3,"HouseImg");
-        DataList1.DataSource = ds3.Tables[0];
-        DataList1.DataBind();
-    }
-
-    protected string bd(string str)
-    {
-
-        string sql = " select  HouseImgFile from  HouseImg where HouseImgId= " + Convert.ToInt32(str);
-
-        DataTable sdr = sqlData.GetDs(sql, "HouseImg").Tables[0];
-
-        if (sdr.Rows.Count > 0)
+        SqlDataReader sqlDataReader;
+        SqlData sqlData = new SqlData();
+        sqlDataReader = sqlData.GetDataReader(@"select * from  House where Location LIKE N'%" + getCityByIP() + "%' ");
+        int no = 1;     //序号 用于标识奇偶, 奇偶列样式不同
+        string retHtml = "";
+        while (sqlDataReader.Read())
         {
-            Console.WriteLine("行数大于1");
-            return sdr.Rows[0]["HouseImgFile"].ToString();
+            if (no % 2 != 1)
+            {
+                retHtml += FrontTemple.getOddBoxHtml(sqlDataReader["HouseTitle"].ToString(), sqlDataReader["Describe"].ToString());
+            }
+            else
+            {
+                retHtml += FrontTemple.getEvenBoxHtml(sqlDataReader["HouseTitle"].ToString(), sqlDataReader["Describe"].ToString());
+            }
+            no++;
+            //searchResult += "<tr><td><h2>"
+            //    + no
+            //    + "<a href=huatixiangxi.aspx?huatiID="
+            //    + sqlDataReader["HouseId"] + ">"
+            //    + sqlDataReader["Location"].ToString()
+            //            .Replace(Request["QueryKey"].ToString(), "<font color='red'>" + Request["QueryKey"].ToString() + "</font>")
+            //     + "</a></h2></td></tr>\n";
+
+            //no++;
         }
-        else
+        sqlDataReader.Close();
+        return retHtml;
+    }
+
+
+
+    public string getCityByIP()
+    {
+        string userIp = "183.247.174.106";//上线后改为 Request.UserHostAddress;
+        //Uri url = new Uri("http://api.map.baidu.com/location/ip?ak=iTrwV0ddxeFT6QUziPQh2wgGofxmWkmg&ip=" + userIp);
+        System.Net.HttpWebRequest request;
+        System.Net.HttpWebResponse response;
+        Console.Write(userIp);
+        string url = string.Format("http://api.map.baidu.com/location/ip?ak=iTrwV0ddxeFT6QUziPQh2wgGofxmWkmg&ip=", userIp);
+        try
         {
-            return "images\\11_03.jpg";
+            request = HttpWebRequest.Create(url) as System.Net.HttpWebRequest;
+            response = request.GetResponse() as System.Net.HttpWebResponse;
+            using (System.IO.Stream stream = response.GetResponseStream())
+            {
+                using (System.IO.StreamReader sr = new System.IO.StreamReader(stream, System.Text.Encoding.UTF8))
+                {
+                    string Data = sr.ReadToEnd();
+                    System.Web.Script.Serialization.JavaScriptSerializer serializer = new JavaScriptSerializer();
+                    Root detail = serializer.Deserialize<Root>(Data);
+                    return detail.content.address_detail.city.ToString();
+                }
+            }
+        }
+        catch (Exception)
+        {
+            return null;
         }
     }
 }
