@@ -15,12 +15,12 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <style type="text/css">
-        <!--
-        p {
+        /*p {
             margin: 0;
             padding: 0
         }
-                #b {
+
+        #b {
             font-family: arial
         }
 
@@ -32,10 +32,31 @@
         #b {
             color: #77c
         }
+
         .auto-style1 {
             margin-top: 0px;
-        }
+        }*/
     </style>
+    <meta charset="utf-8">
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
     <form runat="server">
@@ -59,46 +80,56 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <!--==========================
+  Header
+  ============================-->
+        <header id="header" class="fixed-top">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">租房网</a>
+
+                <div class="logo float-left">
+                    <!-- Uncomment below if you prefer to use an image logo -->
+                    <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+                    <a href="." class="scrollto">
+                        <img src="img/logo.png" alt="" class="img-fluid"></a>
                 </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="HouseList.aspx">房源列表</a></li>
-                    </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a runat="server" class="hvr-overline-from-center button2" href="~/Account/Profile"><%: GetUserName()  %></a></li>
-                        <li>
-                        <li><a runat="server" class="hvr-overline-from-center button2" href="~/Account/Logout.aspx"><%: GetUserName()==String.Empty? "":"退出登陆" %></a></li>
-                    </ul>
-
-                    <%--<asp:LoginView runat="server" ViewStateMode="Disabled" Visible="false">
-                        <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" class="hvr-overline-from-center button2" href="~/Account/Register">注册</a></li>
-                                <li><a runat="server" class="hvr-overline-from-center button2" href="~/Account/Login">登录</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %>!</a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                <nav class="main-nav float-right d-none d-lg-block">
+                    <ul>
+                        <li class="active"><a href=".">首页</a></li>
+                        <li><a runat="server" href="HouseList.aspx">随意浏览</a></li>
+                        <li><a runat="server" href="InformationBoard.aspx">信息公告栏</a></li>
+                        <li><a runat="server" href="HouseList.aspx">新房</a></li>
+                        <li><a runat="server" href="HouseList.aspx">小区</a></li>
+                        <li><a runat="server" href="HouseList.aspx">知识</a></li>
+                        <li class="drop-down"><a href="">Drop Down</a>
+                            <ul>
+                                <li><a href="#">Drop Down 1</a></li>
+                                <li class="drop-down"><a href="#">Drop Down 2</a>
+                                    <ul>
+                                        <li><a href="#">Deep Drop Down 1</a></li>
+                                        <li><a href="#">Deep Drop Down 2</a></li>
+                                        <li><a href="#">Deep Drop Down 3</a></li>
+                                        <li><a href="#">Deep Drop Down 4</a></li>
+                                        <li><a href="#">Deep Drop Down 5</a></li>
+                                    </ul>
                                 </li>
+                                <li><a href="#">Drop Down 3</a></li>
+                                <li><a href="#">Drop Down 4</a></li>
+                                <li><a href="#">Drop Down 5</a></li>
                             </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>--%>
-                </div>
+                        </li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <!-- .main-nav -->
+
             </div>
-        </div>
+        </header>
+        <!-- #header -->
+
+
+
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
@@ -107,6 +138,7 @@
                 <p>&copy; <%: DateTime.Now.Year %> - 租房网</p>
             </footer>
         </div>
+
     </form>
 </body>
 </html>
