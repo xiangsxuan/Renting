@@ -33,9 +33,10 @@
                         <asp:Label runat="server" AssociatedControlID="CKEditorContent" CssClass="col-md-2 control-label">内容</asp:Label>
                         <div class="col-md-10" >
                             <CKEditor:CKEditorControl ID="CKEditorContent" runat="server" ClientIDMode="Static">
-                                亲爱的房主,您好!
+                                亲爱的房主,您好!<br>
                                我是Renting网的一名租客, 我在网上看到了您的房源, 表示很感兴趣, 请问您的房子还外租, 如还在外租请联系我.
-                                 房客:  
+                                 <br>
+                                联系方式: 
 
                             </CKEditor:CKEditorControl>
                         </div>
@@ -43,7 +44,7 @@
 
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <asp:Button runat="server" OnClick="SendEmail" Text="发送" CssClass="btn btn-default" />
+                            <asp:Button runat="server" OnClick="SendEmail" Text="发送" CssClass="btn btn-success" />
                         </div>
                     </div>
 

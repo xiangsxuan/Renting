@@ -11,19 +11,19 @@
         <div class="col-md-4">
             <h2>修改密码</h2>
             <p>
-                <a class="btn btn-default" href="./ChangePassword.aspx">前往 &raquo;</a>
+                <a class="btn btn-success" href="./ChangePassword.aspx">前往 &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
             <h2>浏览房源</h2>
             <p>
-                <a class="btn btn-default" href="./HouseList.aspx">前往 &raquo;</a>
+                <a class="btn btn-success" href="./HouseList.aspx">前往 &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
             <h2>房主交流</h2>
             <p>
-                <a class="btn btn-default" href="./Chat.aspx">前往 &raquo;</a>
+                <a class="btn btn-success" href="./Chat.aspx">前往 &raquo;</a>
             </p>
         </div>
     </div>

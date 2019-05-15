@@ -21,7 +21,7 @@
             </p>
         </div>
         <div class="col-md-4">
-            <h2>查看网站使用情况</h2>
+            <h2>查看网站使用情况（待实现）</h2>
             <p>
                 <a class="btn btn-success" href="./WebState.aspx">前往 &raquo;</a>
             </p>

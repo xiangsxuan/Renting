@@ -56,7 +56,7 @@ h6 {
     height: 44px;
     text-align: center;
     line-height: 1;
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 50%;
     right: 15px;
     bottom: 15px;
@@ -169,13 +169,12 @@ h6 {
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/
-
 #intro {
     width: 100%;
     position: relative;
-    background: url("../img/intro-bg.png") center bottom no-repeat;
+    background: rgba(0, 0, 0, 0.1);
     background-size: cover;
-    padding: 200px 0 120px 0;
+    padding: 100px 0 120px 0;
 }
 
     #intro .intro-img {
@@ -188,53 +187,58 @@ h6 {
         float: left;
     }
 
-        #intro .intro-info h2 {
-            color: #fff;
-            margin-bottom: 40px;
-            font-size: 48px;
-            font-weight: 700;
+    #intro h1 {
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+    #intro h2 {
+        color: #fff;
+        margin-bottom: 40px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+        #intro h2 span {
+            color: #74b5fc;
+            text-decoration: underline;
         }
 
-            #intro .intro-info h2 span {
-                color: #74b5fc;
-                text-decoration: underline;
-            }
+    #intro .intro-info .btn-get-started,
+    #intro .intro-info .btn-services {
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 10px 32px;
+        border-radius: 50px;
+        transition: 0.5s;
+        margin: 0 20px 20px 0;
+        color: #fff;
+    }
 
-        #intro .intro-info .btn-get-started,
-        #intro .intro-info .btn-services {
-            font-family: "Montserrat", sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            display: inline-block;
-            padding: 10px 32px;
-            border-radius: 50px;
-            transition: 0.5s;
-            margin: 0 20px 20px 0;
+    #intro .intro-info .btn-get-started {
+        background: #007bff;
+        border: 2px solid #007bff;
+        color: #fff;
+    }
+
+        #intro .intro-info .btn-get-started:hover {
+            background: none;
+            border-color: #fff;
             color: #fff;
         }
 
-        #intro .intro-info .btn-get-started {
+    #intro .intro-info .btn-services {
+        border: 2px solid #fff;
+    }
+
+        #intro .intro-info .btn-services:hover {
             background: #007bff;
-            border: 2px solid #007bff;
+            border-color: #007bff;
             color: #fff;
         }
-
-            #intro .intro-info .btn-get-started:hover {
-                background: none;
-                border-color: #fff;
-                color: #fff;
-            }
-
-        #intro .intro-info .btn-services {
-            border: 2px solid #fff;
-        }
-
-            #intro .intro-info .btn-services:hover {
-                background: #007bff;
-                border-color: #007bff;
-                color: #fff;
-            }
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -734,6 +738,20 @@ h6 {
             font-size: 14px;
             color: #cce5ff;
         }
+
+    #why-us .intro-info .btn-get-started,
+    #why-us .intro-info .btn-services {
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 10px 32px;
+        border-radius: 50px;
+        transition: 0.5s;
+        margin: 0 20px 20px 0;
+        color: #fff;
+    }
 
 /* Portfolio Section
 --------------------------------*/

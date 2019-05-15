@@ -19,11 +19,11 @@ public partial class Tenant_SearchResult_Location : System.Web.UI.Page
         {
             if (no % 2 != 1)
             {
-                retHtml += getOddHtml(sqlDataReader["HouseTitle"].ToString(), sqlDataReader["Describe"].ToString());
+                retHtml += FrontTemple.getOddBoxHtml(int.Parse(sqlDataReader["HouseId"].ToString()), sqlDataReader["HouseTitle"].ToString(), sqlDataReader["Describe"].ToString());
             }
             else
             {
-                retHtml += getEvenHtml(sqlDataReader["HouseTitle"].ToString(), sqlDataReader["Describe"].ToString());
+                retHtml += FrontTemple.getEvenBoxHtml(int.Parse(sqlDataReader["HouseId"].ToString()), sqlDataReader["HouseTitle"].ToString(), sqlDataReader["Describe"].ToString());
             }
             no++;
             //searchResult += "<tr><td><h2>"

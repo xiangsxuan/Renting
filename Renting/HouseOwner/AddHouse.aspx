@@ -77,7 +77,7 @@
                                 <div class="input-append">
                                     <asp:TextBox ClientIDMode="Static" runat="server" CssClass="form-control" type="text" ID="suggestId" class="input-xlarge" name="place" value="<%=Address %>"
                                         data-rule-required="true" />
-                                    <button class="btn btn-default" type="button" id="positioning">
+                                    <button class="btn btn-success" type="button" id="positioning">
                                         搜索</button><span class="maroon">注意：请至少从市级别描述!（精准位置请拖动地图选择）</span>
                                 </div>
 

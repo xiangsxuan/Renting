@@ -18,6 +18,7 @@ public partial class Account_Logout : System.Web.UI.Page
         Session["Role"] = String.Empty;
         Session["Name"] = String.Empty;
         Session["Phone"] = String.Empty;
+        Session["Email"] = String.Empty;
 
         Alert.AlertAndRedirect("已退出登陆", "../Default.aspx");
     }

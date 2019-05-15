@@ -43,7 +43,7 @@
 
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <asp:Button runat="server" OnClick="SendEmail" Text="发送" CssClass="btn btn-default" />
+                            <asp:Button runat="server" OnClick="SendEmail" Text="发送" CssClass="btn btn-success" />
                         </div>
                     </div>
 

@@ -51,7 +51,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-offset-2 col-md-10">
-                                <asp:Button runat="server" Text="更改密码" OnClick="ChangePassword_Click" CssClass="btn btn-default" ValidationGroup="ChangePassword" />
+                                <asp:Button runat="server" Text="更改密码" OnClick="ChangePassword_Click" CssClass="btn btn-success" ValidationGroup="ChangePassword" />
                             </div>
                         </div>
                     </div>

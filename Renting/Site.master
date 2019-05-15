@@ -95,15 +95,14 @@
 
                 <nav class="main-nav float-right d-none d-lg-block">
                     <ul>
-                        <li class="active"><a href=".">首页</a></li>
+                        <li class="active"><a href="./Index.aspx">首页</a></li>
                         <li><a runat="server" href="HouseList.aspx">随意浏览</a></li>
                         <li><a runat="server" href="InformationBoard.aspx">信息公告栏</a></li>
-                        <li><a runat="server" href="HouseList.aspx">新房</a></li>
-                        <li><a runat="server" href="HouseList.aspx">小区</a></li>
-                        <li><a runat="server" href="HouseList.aspx">知识</a></li>
-                        <li class="drop-down"><a href="">Drop Down</a>
+                        <li><a runat="server" href="#.aspx">租房论坛</a></li>
+                        <li><a runat="server" href="#.aspx">求合租</a></li>
+                        <%--<li class="drop-down"><a href="">租房论坛</a>
                             <ul>
-                                <li><a href="#">Drop Down 1</a></li>
+                                <li><a href="#">求合租</a></li>
                                 <li class="drop-down"><a href="#">Drop Down 2</a>
                                     <ul>
                                         <li><a href="#">Deep Drop Down 1</a></li>
@@ -117,8 +116,8 @@
                                 <li><a href="#">Drop Down 4</a></li>
                                 <li><a href="#">Drop Down 5</a></li>
                             </ul>
-                        </li>
-                        <li><a href="#contact">Contact Us</a></li>
+                        </li>--%>
+                        <li><a href="#">联系我们</a></li>
                     </ul>
                 </nav>
                 <!-- .main-nav -->

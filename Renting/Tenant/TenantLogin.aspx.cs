@@ -34,6 +34,7 @@ public partial class Tenant_TenantLogin : System.Web.UI.Page
             Session["TenantName"] = sqlDataReader["Name"].ToString();
             Session["Name"] = sqlDataReader["Name"].ToString();
             Session["Role"] = "Tenant";
+            Session["Email"]= sqlDataReader["Email"].ToString();
             Alert.AlertAndRedirect("登陆成功！", "./Index.aspx");
 
         }
