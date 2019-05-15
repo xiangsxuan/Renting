@@ -23,11 +23,11 @@ public partial class HouseList : Page
         {
             if (no % 2 != 1)
             {
-                retHtml += FrontTemple.getOddBoxHtml(sqlDataReader["HouseTitle"].ToString(), sqlDataReader["Describe"].ToString());
+                retHtml += FrontTemple.getOddBoxHtml(int.Parse(sqlDataReader["HouseId"].ToString()),sqlDataReader["HouseTitle"].ToString(), sqlDataReader["Describe"].ToString());
             }
             else
             {
-                retHtml += FrontTemple.getEvenBoxHtml(sqlDataReader["HouseTitle"].ToString(), sqlDataReader["Describe"].ToString());
+                retHtml += FrontTemple.getEvenBoxHtml(int.Parse(sqlDataReader["HouseId"].ToString()), sqlDataReader["HouseTitle"].ToString(), sqlDataReader["Describe"].ToString());
             }
             no++;
             //searchResult += "<tr><td><h2>"
