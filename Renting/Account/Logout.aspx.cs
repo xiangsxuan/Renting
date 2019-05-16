@@ -20,6 +20,6 @@ public partial class Account_Logout : System.Web.UI.Page
         Session["Phone"] = String.Empty;
         Session["Email"] = String.Empty;
 
-        Alert.AlertAndRedirect("已退出登陆", "../Default.aspx");
+        Alert.AlertAndRedirect("已退出登陆", "../Index.aspx");
     }
 }
