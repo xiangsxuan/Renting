@@ -34,12 +34,12 @@ public partial class Tenant_ChangePassword : System.Web.UI.Page
         SqlData sqlData = new SqlData();
         if (IsValid)
         {
-            dr = sqlData.GetDataReader("select * from  Tenant where TenantId='" + Session["TenantId"].ToString() + "'and Password='" + CurrentPassword.Text + "' ");
+            dr = sqlData.GetDataReader("select * from  Tenant where TenantId='" + Session["TenantId"].ToString() + "'and Password='" + CurrentPassword.Text.GetHashCode() + "' ");
             if (dr.HasRows)
             {
                 try
                 {
-                    sqlData.RunSql("Update Tenant Set Password = '" + NewPassword.Text + "' where TenantId='" + Session["TenantId"].ToString() + "' ");
+                    sqlData.RunSql("Update Tenant Set Password = '" + NewPassword.Text.GetHashCode() + "' where TenantId='" + Session["TenantId"].ToString() + "' ");
                     Alert.AlertAndRedirect("修改成功！", "./Index.aspx");
                 }
                 catch

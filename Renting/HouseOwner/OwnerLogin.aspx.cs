@@ -42,7 +42,7 @@ public partial class Tenant_TenantLogin : System.Web.UI.Page
         }
         else
         {
-            Alert.AlertAndRedirect("账号或者密码不对请重新登陆！", "../Default.aspx");
+            Alert.AlertAndRedirect("账号或者密码不对请重新登陆！", "../Index.aspx");
         }
     }
 }

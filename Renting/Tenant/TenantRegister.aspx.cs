@@ -20,7 +20,7 @@ public partial class Account_Register : Page
     SqlData data = new SqlData();
     protected void CreateUser_Click(object sender, EventArgs e)
     {
-        data.RunSql("insert into  Tenant (Name,Email,Password) values ('" + UserName.Text + "','" + Email.Text + "','"+Password.Text + "')");
+        data.RunSql("insert into  Tenant (Name,Email,Password) values ('" + UserName.Text + "','" + Email.Text + "','"+Password.Text.GetHashCode() + "')");
         Alert.AlertAndRedirect("注册成功，跳转至登陆页面", "TenantLogin.aspx");
     }
 }

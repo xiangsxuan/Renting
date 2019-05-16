@@ -52,11 +52,20 @@
                     </div>
 
                     <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Size" CssClass="col-md-2 control-label">面积</asp:Label>
+                        <asp:Label runat="server" AssociatedControlID="SquareMeter" CssClass="col-md-2 control-label">面积</asp:Label>
                         <div class="col-md-10">
-                            <asp:TextBox runat="server" ID="Size" CssClass="form-control" />
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Size"
+                            <asp:TextBox runat="server" ID="SquareMeter" CssClass="form-control"  ToolTip="输入数字即可,单位平方米"/>
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="SquareMeter"
                                 CssClass="text-danger" ErrorMessage="“面积”字段是必填字段。" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <asp:Label runat="server" AssociatedControlID="Price" CssClass="col-md-2 control-label">价格</asp:Label>
+                        <div class="col-md-10">
+                            <asp:TextBox runat="server" ID="Price" CssClass="form-control" ToolTip="输入数字即可,单位元"/>
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Price"
+                                CssClass="text-danger" ErrorMessage="“价格”字段是必填字段。" />
                         </div>
                     </div>
 

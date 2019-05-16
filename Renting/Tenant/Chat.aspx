@@ -33,10 +33,9 @@
                         <asp:Label runat="server" AssociatedControlID="CKEditorContent" CssClass="col-md-2 control-label">内容</asp:Label>
                         <div class="col-md-10" >
                             <CKEditor:CKEditorControl ID="CKEditorContent" runat="server" ClientIDMode="Static">
-                                亲爱的房主,您好!<br>
-                               我是Renting网的一名租客, 我在网上看到了您的房源, 表示很感兴趣, 请问您的房子还外租, 如还在外租请联系我.
-                                 <br>
-                                联系方式: 
+                                <p>亲爱的房主,您好!</p>
+                               <p>我是Renting网的一名租客, 我在网上看到了您的房源, 表示很感兴趣, 请问您的房子还外租, 如还在外租请联系我.</p>
+                                <p>联系方式: </p>
 
                             </CKEditor:CKEditorControl>
                         </div>

@@ -3,8 +3,7 @@
 
     <div class="jumbotron">
         <h1>管理站点</h1>
-<%--        <p class="lead">出租房源？租住房源？快来租房网，为您免费提供了房主房客沟通平台, 。</p>
-        <p><a href="./HouseList.aspx" " class="btn btn-primary btn-lg">随意浏览»</a></p>--%>
+        <p><a href="../Account/Logout.aspx" " class="btn btn-primary btn-lg">退出登陆»</a></p>
     </div>
 
     <div class="row">

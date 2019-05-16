@@ -21,12 +21,12 @@ public partial class HouseOwner_ChangePassword : System.Web.UI.Page
         SqlData sqlData = new SqlData();
         if (IsValid)
         {
-            dr = sqlData.GetDataReader("select * from  HouseOwner where HouseOwnerId='" + Session["HouseOwnerId"].ToString() + "'and Password='" + CurrentPassword.Text + "' ");
+            dr = sqlData.GetDataReader("select * from  HouseOwner where HouseOwnerId='" + Session["HouseOwnerId"].ToString() + "'and Password='" + CurrentPassword.Text.GetHashCode() + "' ");
             if (dr.HasRows)
             {
                 try
                 {
-                    sqlData.RunSql("Update HouseOwner Set Password = '" + NewPassword.Text + "' where HouseOwnerId='" + Session["HouseOwnerId"].ToString() + "' ");
+                    sqlData.RunSql("Update HouseOwner Set Password = '" + NewPassword.Text.GetHashCode() + "' where HouseOwnerId='" + Session["HouseOwnerId"].ToString() + "' ");
                     Alert.AlertAndRedirect("修改成功！", "./Index.aspx");
                 }
                 catch

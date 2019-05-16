@@ -14,13 +14,14 @@ public partial class Admin_AddHouse : System.Web.UI.Page
     SqlData sqldata = new SqlData();
     protected void ChangePassword_Click(object sender, EventArgs e)
     {
-        sqldata.RunSql("insert into  House (HouseTitle,Describe,Location,ReleaseTime,HouseType,Size,Longitude,Latitude,HouseOwnerId,HouseOwnerName,Phone) values (" +
+        sqldata.RunSql("insert into  House (HouseTitle,Describe,Location,ReleaseTime,HouseType,SquareMeter,Price,Longitude,Latitude,HouseOwnerId,HouseOwnerName,Phone) values (" +
                     "N'" + HouseTitle.Text +
                     "',N'" + Describe.Text +
                     "',N'" + suggestId.Text +
                     "',N'" + DateTime.Now.ToString() +
                     "',N'" + HouseType.Text +
-                    "',N'" + Size.Text +
+                    "','" + float.Parse(SquareMeter.Text) +
+                    "','" + float.Parse(Price.Text) +
                     "','" + lng.Text +
                     "','" + lat.Text +
                     "',N'" + "请联系管理员查询房主信息" +

@@ -18,7 +18,7 @@ public partial class Tenant_TenantLogin : System.Web.UI.Page
     {
         SqlDataReader sqlDataReader;
         SqlData sqlData = new SqlData();
-        sqlDataReader = sqlData.GetDataReader("select * from  Tenant where Name='" + UserName.Text + "'and Password='" + Password.Text + "' ");
+        sqlDataReader = sqlData.GetDataReader("select * from  Tenant where Name='" + UserName.Text + "'and Password='" + Password.Text.GetHashCode() + "' ");
         if (sqlDataReader.Read())
         {
             Session["AdminId"] = String.Empty;
@@ -40,7 +40,7 @@ public partial class Tenant_TenantLogin : System.Web.UI.Page
         }
         else
         {
-            Alert.AlertAndRedirect("账号或者密码不对请重新登陆！", "../Default.aspx");
+            Alert.AlertAndRedirect("账号或者密码不对请重新登陆！", "../Index.aspx");
         }
     }
 }

@@ -18,9 +18,9 @@ public partial class HouseDetails : Page
         SqlData sqlData = new SqlData();
         sqlDataReader = sqlData.GetDataReader(@"select * from  House where HouseId='" + Request["HouseId"].ToString() + "'");
         string retTitle = "";
-        if(sqlDataReader.Read())
+        if (sqlDataReader.Read())
         {
-           retTitle = sqlDataReader["HouseTitle"].ToString();
+            retTitle = sqlDataReader["HouseTitle"].ToString();
         }
         return retTitle;
     }
@@ -47,7 +47,9 @@ public partial class HouseDetails : Page
                                         sqlDataReader["Latitude"].ToString(),
                                         sqlDataReader["HouseImg"].ToString(),
                                         sqlDataReader["Phone"].ToString(),
-                                        sqlDataReader["HouseOwnerName"].ToString()
+                                        sqlDataReader["HouseOwnerName"].ToString(),
+                                        float.Parse(sqlDataReader["Price"].ToString()),
+                                        float.Parse(sqlDataReader["SquareMeter"].ToString())
                                             );
         }
         sqlDataReader.Close();
